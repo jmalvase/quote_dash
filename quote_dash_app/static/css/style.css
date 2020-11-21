@@ -1,0 +1,48 @@
+* {
+    font-family: 'Hermit', monospace;
+}
+#wrapper {
+    width: 950px;
+    font-family: sans-serif;
+    padding: 25px; 
+}
+#dash-wrapper {
+    width: 950px;
+    font-family: sans-serif;
+}
+#wrapper > h1 {
+    color: black;
+}
+.form-box{
+    display: inline-block;
+    width: 400px;
+    vertical-align: top;
+    padding: 25px;
+    margin: 10px;
+}
+.form-box > form {
+    margin: 25px;
+}
+.form-box input {
+    display: block;
+    margin: 10px;
+}
+#dash-header {
+    display: inline-block;
+    vertical-align:top;
+}
+#dash-header > form {
+    margin-left: 880px;
+    margin-top: 4px;
+    vertical-align: top;
+}
+#dash-header > a {
+    margin-left: 800px;
+}
+.one-quote {
+    outline: 1px solid black;
+    width: 49%;
+}
+.add-quote{
+    display: inline-block;
+}

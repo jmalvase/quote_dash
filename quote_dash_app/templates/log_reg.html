@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Log and Reg</title>
+</head>
+<body>
+    <div id="wrapper">
+    <h1>Welcome</h1>
+        {% if messages %}
+        <ul>
+            {% for error in messages %}
+            <li>{{error}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <div class="form-box">
+            <h2>Register</h2>
+            <form action="/create_user" method="POST">
+                {% csrf_token %}
+                First Name <input type="text" name="first_name">
+                Last Name <input type="text" name="last_name">
+                Email Address <input type="email" name="email" unique=True>
+                Password <input type="password" name="password">
+                Confirm Password <input type="password" name="confirm_pw">
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <div class="form-box">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                {% csrf_token %}
+                Email: <input type="email" name="email">
+                Password: <input type="password" name="password">
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
